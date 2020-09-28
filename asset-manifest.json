@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/thomasGarrisonProject5/static/css/main.b65d3072.chunk.css",
+    "main.js": "/thomasGarrisonProject5/static/js/main.ee390deb.chunk.js",
+    "main.js.map": "/thomasGarrisonProject5/static/js/main.ee390deb.chunk.js.map",
+    "runtime-main.js": "/thomasGarrisonProject5/static/js/runtime-main.05749c57.js",
+    "runtime-main.js.map": "/thomasGarrisonProject5/static/js/runtime-main.05749c57.js.map",
+    "static/js/2.79ef2ec3.chunk.js": "/thomasGarrisonProject5/static/js/2.79ef2ec3.chunk.js",
+    "static/js/2.79ef2ec3.chunk.js.map": "/thomasGarrisonProject5/static/js/2.79ef2ec3.chunk.js.map",
+    "index.html": "/thomasGarrisonProject5/index.html",
+    "precache-manifest.86782e83b395d09c79873683dca18483.js": "/thomasGarrisonProject5/precache-manifest.86782e83b395d09c79873683dca18483.js",
+    "service-worker.js": "/thomasGarrisonProject5/service-worker.js",
+    "static/css/main.b65d3072.chunk.css.map": "/thomasGarrisonProject5/static/css/main.b65d3072.chunk.css.map",
+    "static/js/2.79ef2ec3.chunk.js.LICENSE.txt": "/thomasGarrisonProject5/static/js/2.79ef2ec3.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/thomasGarrisonProject5/static/media/old-parchment-paper-with-flowers.3a884a6d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.05749c57.js",
+    "static/js/2.79ef2ec3.chunk.js",
+    "static/css/main.b65d3072.chunk.css",
+    "static/js/main.ee390deb.chunk.js"
+  ]
+}
