@@ -66,3 +66,22 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+### image sourses
+
+background image found 'https://www.myfreetextures.com/wp-content/uploads/2014/10/old-parchment-paper-with-flowers.jpg'
+
+curticy  listed under a simple licence 'The images of My Free Textures are copyrighted and distributed as royalty free with the only exception being the right to use photos from this website to create a similar or competing service, like a stock photography platform.
+
+What this means is you can use the images for your projects (both commercial -unless a competing platform as stated above- and non-commercial) but you have to give credit and attribution to this site.
+
+Please link back to either the homepage or to the page in which the image is rather than the actual image file.
+
+ 
+
+MyFreeTextures License'
+
+full information of the license found here 'https://www.myfreetextures.com/use-license/'
+

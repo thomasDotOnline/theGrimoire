@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 80%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  background-image: url(./assets/old-parchment-paper-with-flowers.jpg);
+  background-size: cover;
+  background-position: bottom-left;
+  font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contentContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  /* grid-template-columns: 2fr 1fr 2fr; */
 }
 
-.App-link {
-  color: #61dafb;
+/* .spellsContainer {
+  background-color: lightseagreen;
+} */
+
+.spells {
+  /* grid-column-start: 3; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.spellCard {
+  z-index: 10;
+  background-color: sandybrown;
+  padding: 20px 40px;
+  margin: 30px auto;
+  border-radius: 10px;
+  width: calc(50% - 100px);
+}
+
+.spellCard p:nth-child(2n){
+  color: blue;
+}
+
+.spellCard:hover,
+.spellCard:focus {
+  background-color: lightcoral;
+  box-shadow: 10px 10px 5px 0px rgba(235, 196, 38, 1);
+}
+
+.spellBook {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* .spellBookContainer {
+  background-color: lightskyblue;
+} */
+
+.spellBookItem {
+  z-index: 10;
+  background-color: khaki;
+  padding: 20px 40px;
+  margin: 30px auto;
+  border-radius: 10px;
+  width: calc(50% - 100px);
+}
+
+.spellBookItem:hover,
+.spellBookItem:focus {
+  background-color: lightcoral;
+  box-shadow: -10px 10px 5px 0px rgba(235, 196, 38, 1);
+}
+
+button {
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+button:focus,
+button:hover {
+  background-color: lightcoral;
 }
