@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 import Header from "./Header.js";
+import Footer from "./Footer.js"
 import firebase from "./firebase.js";
 
 class App extends Component {
@@ -110,9 +111,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <div>
         <Header />
-        <div className="App">
+        <div className="App wrapper">
           <div className="spellBookContainer">
             <h2>Your Spellbook</h2>
             <div className="spellBook">
@@ -122,13 +123,15 @@ class App extends Component {
                 this.state.spellBook.map((spellRes) => {
                   return (
                     <div key={spellRes.key} className="spellBookItem">
-                      <h3>{spellRes.spellData.name}</h3>
-                      <h4>{spellRes.spellData.level}</h4>
-                      <h4>{spellRes.spellData.range}</h4>
-                      <p className="description">{spellRes.spellData.desc}</p>
-                      <button onClick={() => this.handleRemove(spellRes.key)}>
-                        Remove
-                      </button>
+                      <div className="spellContent">
+                        <h3>{spellRes.spellData.name}</h3>
+                        <h4>{spellRes.spellData.level}</h4>
+                        <h4>{spellRes.spellData.range}</h4>
+                        <p className="description">{spellRes.spellData.desc}</p>
+                        <button onClick={() => this.handleRemove(spellRes.key)}>
+                          Remove
+                        </button>
+                      </div>
                     </div>
                   );
                 })
@@ -162,18 +165,20 @@ class App extends Component {
                   this.state.data.map((spell) => {
                     return (
                       <div className="spellCard" key={spell.slug}>
-                        <h3>{spell.name}</h3>
-                        <h4>{spell.level}</h4>
-                        <h4>{spell.range}</h4>
-                        <p className="description">{spell.desc}</p>
-                        <button
-                          onClick={
-                            (() => this.handleClick(spell.name),
-                            () => this.handleClick(spell))
-                          }
-                        >
-                          Transcribe
-                        </button>
+                        <div className="spellContent">
+                          <h3>{spell.name}</h3>
+                          <h4>{spell.level}</h4>
+                          <h4>{spell.range}</h4>
+                          <p className="description">{spell.desc}</p>
+                          <button
+                            onClick={
+                              (() => this.handleClick(spell.name),
+                              () => this.handleClick(spell))
+                            }
+                          >
+                            Transcribe
+                          </button>
+                        </div>
                       </div>
                     );
                   })
@@ -182,6 +187,7 @@ class App extends Component {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

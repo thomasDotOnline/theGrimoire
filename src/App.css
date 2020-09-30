@@ -66,12 +66,17 @@ header p {
   border-radius: 30px;
 }
 
+.spellContent {
+  margin-left: 50px;
+}
+
 .spells {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   font-family: 'Caveat', cursive;
-  font-size: 2rem;
+  font-size: 2.4rem;
+  color: #542e92;
 }
 
 .spellCard {
@@ -115,13 +120,6 @@ header p {
   overflow: hidden;
 }
 
-.spellBookItem h3,
-.spellBookItem h4,
-.spellBookItem p,
-.spellBookItem button {
-  margin-left: 30px;
-}
-
 .spellBookItem:hover,
 .spellBookItem:focus {
   background-color: lightcoral;
@@ -156,6 +154,25 @@ button:hover {
 
 /* button styles end */
 
+/* footer styles start */
+footer {
+  background-color: rgba(235, 196, 38, .8);
+  color: #542e92;
+  font-size: 2rem;
+  text-align: center;
+  padding: 2px 0;
+  margin-top: 25px;
+}
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #211924;
+}
+/* footer styles end  */
+
 
 @media (max-width: 900px) {
   .wrapper {
@@ -169,10 +186,7 @@ button:hover {
     font-size: 1.5rem;
   }
 
-  .spellBookItem p,
-  .spellBookItem h3,
-  .spellBookItem h4,
-  .spellBookItem button {
+.spellContent {
     margin-left: 100px;
   }
 
@@ -183,10 +197,7 @@ button:hover {
 
 @media (max-width: 500px) {
 
-  .spellBookItem p,
-  .spellBookItem h3,
-  .spellBookItem h4,
-  .spellBookItem button {
+.spellContent {
     margin-left: 30px;
   }
 
@@ -194,10 +205,7 @@ button:hover {
 
 @media (max-width: 320px) {
 
-  .spellBookItem p,
-  .spellBookItem h3,
-  .spellBookItem h4,
-  .spellBookItem button {
+.spellContent {
     margin-left: 0px;
   }
 }
