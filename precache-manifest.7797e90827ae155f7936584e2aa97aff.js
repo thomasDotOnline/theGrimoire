@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6fd23c97d81d98b8c3110ba1ffad6007",
+    "revision": "d7612ebfad1ad21a960ec2d1d667bf8d",
     "url": "/thomasGarrisonProject5/index.html"
   },
   {
-    "revision": "c3716393be03d0c2360a",
-    "url": "/thomasGarrisonProject5/static/css/main.12d24fb3.chunk.css"
+    "revision": "a4d3907017725cd5eb22",
+    "url": "/thomasGarrisonProject5/static/css/main.17a9567a.chunk.css"
   },
   {
     "revision": "43b046f834edb13d45e5",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/thomasGarrisonProject5/static/js/2.21221587.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c3716393be03d0c2360a",
-    "url": "/thomasGarrisonProject5/static/js/main.9ac0b0b5.chunk.js"
+    "revision": "a4d3907017725cd5eb22",
+    "url": "/thomasGarrisonProject5/static/js/main.b56ba228.chunk.js"
   },
   {
     "revision": "cd1bd314850759840e40",
@@ -32,7 +32,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/thomasGarrisonProject5/static/media/old-grunge-paper-texture-background-900x1168.97e35551.jpg"
   },
   {
+    "revision": "3a884a6dfc511a4de827334c72c6d4ff",
+    "url": "/thomasGarrisonProject5/static/media/old-parchment-paper-with-flowers.3a884a6d.jpg"
+  },
+  {
     "revision": "c2242eaa6793014db01b2379a2004f51",
     "url": "/thomasGarrisonProject5/static/media/paper-1074131.c2242eaa.jpg"
+  },
+  {
+    "revision": "9d5f2d43638116be656c91595e0d5944",
+    "url": "/thomasGarrisonProject5/static/media/parchment.9d5f2d43.jpg"
   }
 ]);
