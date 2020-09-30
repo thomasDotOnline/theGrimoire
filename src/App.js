@@ -25,11 +25,11 @@ class App extends Component {
         page: this.state.pageNumber,
       },
     }).then((res) => {
-      console.log(res);
       this.setState({
         data: [...res.data.results],
         isLoading: false,
       });
+      console.log(res);
     });
 
     const dbRef = firebase.database().ref();
@@ -48,10 +48,10 @@ class App extends Component {
       this.setState({
         spellBook: newState,
       });
-      console.log(newState);
     });
   }
-  componentDidUpdate() {
+
+  getSpells = (page) => {
     axios({
       method: "GET",
       url: "https://api.open5e.com/spells/",
@@ -61,31 +61,39 @@ class App extends Component {
         page: this.state.pageNumber,
       },
     }).then((res) => {
-      console.log(res);
       this.setState({
         data: [...res.data.results],
         isLoading: false,
       });
+      console.log(res);
     });
-  }
+  };
 
   handleNextPage = () => {
-    console.log("next");
     if ((this.state.pageNumber > 1, this.state.pageNumber < 7)) {
       const nextPage = this.state.pageNumber + 1;
-      this.setState({
-        pageNumber: nextPage,
-      });
+      this.setState(
+        {
+          pageNumber: nextPage,
+        },
+        () => {
+          this.getSpells(nextPage);
+        }
+      );
     }
   };
 
   handlePrevPage = () => {
-    console.log("previous");
     if ((this.state.pageNumber < 7, this.state.pageNumber > 1)) {
       const prevPage = this.state.pageNumber - 1;
-      this.setState({
-        pageNumber: prevPage,
-      });
+      this.setState(
+        {
+          pageNumber: prevPage,
+        },
+        () => {
+          this.getSpells(prevPage);
+        }
+      );
     }
   };
 
@@ -106,6 +114,7 @@ class App extends Component {
         <Header />
         <div className="App">
           <div className="spellBookContainer">
+            <h2>Your Spellbook</h2>
             <div className="spellBook">
               {this.state.isLoading ? (
                 <p>Loading...</p>
@@ -113,7 +122,9 @@ class App extends Component {
                 this.state.spellBook.map((spellRes) => {
                   return (
                     <div key={spellRes.key} className="spellBookItem">
-                      <h2>{spellRes.spellData.name}</h2>
+                      <h3>{spellRes.spellData.name}</h3>
+                      <h4>{spellRes.spellData.level}</h4>
+                      <h4>{spellRes.spellData.range}</h4>
                       <p className="description">{spellRes.spellData.desc}</p>
                       <button onClick={() => this.handleRemove(spellRes.key)}>
                         Remove
@@ -150,12 +161,10 @@ class App extends Component {
                 ) : (
                   this.state.data.map((spell) => {
                     return (
-                      <div
-                        className="spellCard"
-                        key={spell.slug}
-                        // className="spellCard"
-                      >
-                        <h2>{spell.name}</h2>
+                      <div className="spellCard" key={spell.slug}>
+                        <h3>{spell.name}</h3>
+                        <h4>{spell.level}</h4>
+                        <h4>{spell.range}</h4>
                         <p className="description">{spell.desc}</p>
                         <button
                           onClick={

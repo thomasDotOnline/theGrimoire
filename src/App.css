@@ -21,38 +21,49 @@ html {
   background-size: contain;
   background-position: center;
   font-size: 62.5%;
-
+  color: #211924;
 }
 
-p {
-  color: #342838;
+h2 {
+  margin-top: 50px;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: 4rem;
 }
 
+/* General styles end  */
+
+/* header styles start */
 header {
+  font-family: 'Caveat', cursive;
   text-align: center;
   margin: 150px 0;
 }
 
-/* .contentContainer {
-  display: flex;
-  flex-wrap: wrap;
-} */
-
-/* General styles end  */
-
-.contentContainer h2 {
-  margin: 0 auto;
-  padding: 25px 0;
+h1 {
+  text-transform: uppercase;
+  font-size: 6rem;
 }
 
-.buttonContainer {
-  width: 300px;
-  margin: 0 auto;
+header p {
+  font-size: 4rem;
+}
+/* header styles end */
+
+
+
+.spellBookContainer {
+  background-image: url(./assets/old-parchment-paper-with-flowers.jpg);
+  background-size: cover;
+  padding: 50px 20px;
+  border-radius: 30px;
 }
 
-button {
-  width: 150px;
-  background-color: rgba(235, 196, 38, 0.2);
+.contentContainer {
+  background-image: url(./assets/parchment.jpg);
+  background-size: contain;
+  padding: 50px 20px;
+  border-radius: 30px;
 }
 
 .spells {
@@ -70,7 +81,6 @@ button {
   margin: 30px auto;
   border-radius: 10px;
   width: calc(50% - 100px);
-  min-width: 200px;
   height: 300px;
   overflow: hidden;
 }
@@ -80,7 +90,7 @@ button {
   background-color: lightcoral;
   box-shadow: 10px 10px 5px 0px rgba(235, 196, 38, 1);
   overflow-y: scroll;
-
+  
 }
 
 .spellBook {
@@ -91,31 +101,25 @@ button {
   font-size: 2rem;
 }
 
-/* .spellBookContainer {
-  background-color: lightskyblue;
-} */
-
 .spellBookItem {
   background-image: url(./assets/book6-900x1022.jpg);
-  background-position: right;
   background-size: cover;
-  background-repeat: no-repeat;
   margin-left: 50px;
   z-index: 10;
   background-color: white;
   padding: 20px 50px;
   margin: 30px auto;
   border-radius: 10px;
-  width: calc(50% - 120px);
-  min-width: 200px;
+  width: calc(50% - 40px);
   height: 300px;
   overflow: hidden;
 }
 
-.spellBookItem h2,
+.spellBookItem h3,
+.spellBookItem h4,
 .spellBookItem p,
 .spellBookItem button {
-  margin-left: 25px;
+  margin-left: 30px;
 }
 
 .spellBookItem:hover,
@@ -125,25 +129,75 @@ button {
   overflow-y: scroll;
 }
 
+/* button styles start */
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
 button {
-  padding: 5px 15px;
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  text-transform: capitalize;
+  width: 120px;
+  background-color: rgba(235, 196, 38, 0.2);
+  padding: 10px 0;
   border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 button:focus,
 button:hover {
-  background-color: lightcoral;
+  background-color: rgba(235, 196, 38, 0.6);
 }
 
+/* button styles end */
 
 
-/* 
 @media (max-width: 900px) {
+  .wrapper {
+    width: 90%;
+  }
   .spellBookItem {
     width: 100%;
+  }
+
+  .spellBookItem p {
+    font-size: 1.5rem;
+  }
+
+  .spellBookItem p,
+  .spellBookItem h3,
+  .spellBookItem h4,
+  .spellBookItem button {
+    margin-left: 100px;
   }
 
   .spellCard {
     width: 100%;
   }
-} */
+}
+
+@media (max-width: 500px) {
+
+  .spellBookItem p,
+  .spellBookItem h3,
+  .spellBookItem h4,
+  .spellBookItem button {
+    margin-left: 30px;
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  .spellBookItem p,
+  .spellBookItem h3,
+  .spellBookItem h4,
+  .spellBookItem button {
+    margin-left: 0px;
+  }
+}
