@@ -132,3 +132,16 @@ button:focus,
 button:hover {
   background-color: lightcoral;
 }
+
+
+
+
+@media (max-width: 900px) {
+  .spellBookItem {
+    width: 100%;
+  }
+
+  .spellCard {
+    width: 100%;
+  }
+}
