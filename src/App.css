@@ -70,6 +70,7 @@ button {
   margin: 30px auto;
   border-radius: 10px;
   width: calc(50% - 100px);
+  min-width: 200px;
   height: 300px;
   overflow: hidden;
 }
@@ -106,6 +107,7 @@ button {
   margin: 30px auto;
   border-radius: 10px;
   width: calc(50% - 120px);
+  min-width: 200px;
   height: 300px;
   overflow: hidden;
 }
@@ -135,7 +137,7 @@ button:hover {
 
 
 
-
+/* 
 @media (max-width: 900px) {
   .spellBookItem {
     width: 100%;
@@ -144,4 +146,4 @@ button:hover {
   .spellCard {
     width: 100%;
   }
-}
+} */

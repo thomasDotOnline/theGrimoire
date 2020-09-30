@@ -152,15 +152,19 @@ class App extends Component {
                     return (
                       <div
                         className="spellCard"
-                        onClick={
-                          (() => this.handleClick(spell.name),
-                          () => this.handleClick(spell))
-                        }
                         key={spell.slug}
                         // className="spellCard"
                       >
                         <h2>{spell.name}</h2>
                         <p className="description">{spell.desc}</p>
+                        <button
+                          onClick={
+                            (() => this.handleClick(spell.name),
+                            () => this.handleClick(spell))
+                          }
+                        >
+                          Transcribe
+                        </button>
                       </div>
                     );
                   })
