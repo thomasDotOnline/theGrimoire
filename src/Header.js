@@ -5,7 +5,8 @@ class Header extends Component {
         return (
         <>
         <header>
-            <h1>Connected</h1>
+            <h1>Your Spellbook</h1>
+            <p>Select a spell from the spell List to add it to your personal spell book</p>
         </header>
         </>
     );
