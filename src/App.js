@@ -13,11 +13,12 @@ class App extends Component {
       isLoading: true,
       pageNumber: 1,
       spellBook: [],
-      userId: ""
+      userId: "",
     };
   }
 
   componentDidMount() {
+    // axios call
     axios({
       method: "GET",
       url: "https://api.open5e.com/spells/",
@@ -31,30 +32,31 @@ class App extends Component {
         data: [...res.data.results],
         isLoading: false,
       });
-      console.log(res);
     });
+
+    // firebase logic start 
 
     const dbRef = firebase.database().ref();
 
     dbRef.on("value", (response) => {
       const newState = [];
       const data = response.val();
-      if (data){
-        const user = data.users[this.state.userId]
+      if (data) {
+        const user = data.users[this.state.userId];
 
-      for (const key in user) {
-        newState.push({
-          key: key,
-          spellData: user[key],
+        for (const key in user) {
+          newState.push({
+            key: key,
+            spellData: user[key],
+          });
+        }
+
+        this.setState({
+          spellBook: newState,
         });
       }
+    });
 
-      this.setState({
-        spellBook: newState,
-      });
-    }});
-
-    
     firebase
       .auth()
       .signInAnonymously()
@@ -67,25 +69,37 @@ class App extends Component {
         console.log(errorMessage);
       });
 
-      firebase.auth().onAuthStateChanged((user) => {
-        if (user) {
-          // User is signed in.
-          var isAnonymous = user.isAnonymous;
-          var uid = user.uid;
-          
-          this.setState ({
-            userId: uid,
-          })
-          // ...
-        } else {
-          // User is signed out.
-          // ...
-        }
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        // User is signed in.
+        var isAnonymous = user.isAnonymous;
+        var uid = user.uid;
+
+        this.setState({
+          userId: uid,
+        });
         // ...
-      });
-
+      } else {
+        // User is signed out.
+        // ...
+      }
+      // ...
+    });
   }
+  handleClick = (event) => {
+    const dbRef = firebase.database().ref();
+    dbRef.child("users").child(this.state.userId).push(event);
+  };
 
+  handleRemove = (spellBookKey) => {
+    const dbRef = firebase.database().ref();
+
+    dbRef.child("users").child(this.state.userId).child(spellBookKey).remove();
+  };
+
+  // firebase logic end
+
+  // page change logic start
   getSpells = (page) => {
     axios({
       method: "GET",
@@ -100,7 +114,6 @@ class App extends Component {
         data: [...res.data.results],
         isLoading: false,
       });
-      console.log(res);
     });
   };
 
@@ -131,23 +144,14 @@ class App extends Component {
       );
     }
   };
-
-  handleClick = (event) => {
-    const dbRef = firebase.database().ref();
-    dbRef.child('users').child(this.state.userId).push(event);
-  }
-
-  handleRemove = (spellBookKey) => {
-    const dbRef = firebase.database().ref();
-
-    dbRef.child(spellBookKey).remove();
-  };
+  // page change logic end
 
   render() {
     return (
       <div>
-        <Header />
         <div className="App wrapper">
+          <Header />
+          {/* spellbook rendered from firebase */}
           <div className="spellBookContainer">
             <h2>Your Spellbook</h2>
             <div className="spellBook">
@@ -175,6 +179,7 @@ class App extends Component {
 
           <div className="spellsContainer">
             <div className="buttonContainer">
+              {/* axios page change */}
               <button
                 onClick={() => {
                   this.handlePrevPage();
@@ -192,6 +197,7 @@ class App extends Component {
             </div>
             <div className="contentContainer">
               <h2>Compendium of Spells</h2>
+              {/* axios call render */}
               <div className="spells">
                 {this.state.isLoading ? (
                   <p>Loading...</p>

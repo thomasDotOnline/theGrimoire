@@ -41,8 +41,14 @@ header {
 }
 
 h1 {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 6rem;
+}
+
+.headerContainer {
+  text-align: start;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 header p {
@@ -50,54 +56,18 @@ header p {
 }
 /* header styles end */
 
+/* spell Style start */
+.spellContent {
+  margin-left: 50px;
+}
 
-
+/* spellbook styles */
 .spellBookContainer {
   background-image: url(./assets/old-parchment-paper-with-flowers.jpg);
   background-size: cover;
   padding: 50px 20px;
   border-radius: 30px;
 }
-
-.contentContainer {
-  background-image: url(./assets/parchment.jpg);
-  background-size: contain;
-  padding: 50px 20px;
-  border-radius: 30px;
-}
-
-.spellContent {
-  margin-left: 50px;
-}
-
-.spells {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  font-family: 'Caveat', cursive;
-  font-size: 2.4rem;
-  color: #542e92;
-}
-
-.spellCard {
-  background-image: url(./assets/old-grunge-paper-texture-background-900x1168.jpg);
-  background-size: cover;
-  padding: 20px 40px;
-  margin: 30px auto;
-  border-radius: 10px;
-  width: calc(50% - 100px);
-  height: 300px;
-  overflow: hidden;
-}
-
-.spellCard:hover,
-.spellCard:focus {
-  background-color: lightcoral;
-  box-shadow: 10px 10px 5px 0px rgba(235, 196, 38, 1);
-  overflow-y: scroll;
-  
-}
-
 .spellBook {
   display: flex;
   flex-wrap: wrap;
@@ -126,6 +96,44 @@ header p {
   box-shadow: -10px 10px 5px 0px rgba(235, 196, 38, 1);
   overflow-y: scroll;
 }
+
+.contentContainer {
+  background-image: url(./assets/parchment.jpg);
+  background-size: contain;
+  padding: 50px 20px;
+  border-radius: 30px;
+}
+
+/* spell compendium */
+.spells {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: 'Caveat', cursive;
+  font-size: 2.4rem;
+  color: #542e92;
+}
+
+.spellCard {
+  background-image: url(./assets/old-grunge-paper-texture-background-900x1168.jpg);
+  background-size: cover;
+  padding: 20px 40px;
+  margin: 30px auto;
+  border-radius: 10px;
+  width: calc(50% - 100px);
+  height: 300px;
+  overflow: hidden;
+}
+
+.spellCard:hover,
+.spellCard:focus {
+  background-color: lightcoral;
+  box-shadow: 10px 10px 5px 0px rgba(235, 196, 38, 1);
+  overflow-y: scroll;
+  
+}
+
+/* spell styles end */
 
 /* button styles start */
 .buttonContainer {
@@ -174,6 +182,7 @@ a:focus {
 /* footer styles end  */
 
 
+/* media queries */
 @media (max-width: 900px) {
   .wrapper {
     width: 90%;
@@ -195,7 +204,14 @@ a:focus {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  header p {
+    font-size: 3rem;
+  }
 
 .spellContent {
     margin-left: 30px;
@@ -203,7 +219,7 @@ a:focus {
 
 }
 
-@media (max-width: 320px) {
+@media (max-width: 370px) {
 
 .spellContent {
     margin-left: 0px;
