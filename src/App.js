@@ -13,6 +13,7 @@ class App extends Component {
       isLoading: true,
       pageNumber: 1,
       spellBook: [],
+      userId: ""
     };
   }
 
@@ -38,18 +39,51 @@ class App extends Component {
     dbRef.on("value", (response) => {
       const newState = [];
       const data = response.val();
+      if (data){
+        const user = data.users[this.state.userId]
 
-      for (const key in data) {
+      for (const key in user) {
         newState.push({
           key: key,
-          spellData: data[key],
+          spellData: user[key],
         });
       }
 
       this.setState({
         spellBook: newState,
       });
-    });
+    }});
+
+    
+    firebase
+      .auth()
+      .signInAnonymously()
+      .catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+        console.log(errorCode);
+        console.log(errorMessage);
+      });
+
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+          // User is signed in.
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          
+          this.setState ({
+            userId: uid,
+          })
+          // ...
+        } else {
+          // User is signed out.
+          // ...
+        }
+        // ...
+      });
+
   }
 
   getSpells = (page) => {
@@ -100,8 +134,8 @@ class App extends Component {
 
   handleClick = (event) => {
     const dbRef = firebase.database().ref();
-    dbRef.push(event);
-  };
+    dbRef.child('users').child(this.state.userId).push(event);
+  }
 
   handleRemove = (spellBookKey) => {
     const dbRef = firebase.database().ref();
