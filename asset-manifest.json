@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/thomasGarrisonProject5/static/css/main.4c9b8db7.chunk.css",
-    "main.js": "/thomasGarrisonProject5/static/js/main.49ca146e.chunk.js",
-    "main.js.map": "/thomasGarrisonProject5/static/js/main.49ca146e.chunk.js.map",
-    "runtime-main.js": "/thomasGarrisonProject5/static/js/runtime-main.05749c57.js",
-    "runtime-main.js.map": "/thomasGarrisonProject5/static/js/runtime-main.05749c57.js.map",
-    "static/js/2.d78362e0.chunk.js": "/thomasGarrisonProject5/static/js/2.d78362e0.chunk.js",
-    "static/js/2.d78362e0.chunk.js.map": "/thomasGarrisonProject5/static/js/2.d78362e0.chunk.js.map",
-    "index.html": "/thomasGarrisonProject5/index.html",
-    "precache-manifest.79c83b1b8117660a62ce5f65215d884a.js": "/thomasGarrisonProject5/precache-manifest.79c83b1b8117660a62ce5f65215d884a.js",
-    "service-worker.js": "/thomasGarrisonProject5/service-worker.js",
-    "static/css/main.4c9b8db7.chunk.css.map": "/thomasGarrisonProject5/static/css/main.4c9b8db7.chunk.css.map",
-    "static/js/2.d78362e0.chunk.js.LICENSE.txt": "/thomasGarrisonProject5/static/js/2.d78362e0.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/thomasGarrisonProject5/static/media/parchment.9d5f2d43.jpg"
+    "main.css": "/theGrimoire/static/css/main.6293af4e.chunk.css",
+    "main.js": "/theGrimoire/static/js/main.74330bfa.chunk.js",
+    "main.js.map": "/theGrimoire/static/js/main.74330bfa.chunk.js.map",
+    "runtime-main.js": "/theGrimoire/static/js/runtime-main.497260ab.js",
+    "runtime-main.js.map": "/theGrimoire/static/js/runtime-main.497260ab.js.map",
+    "static/js/2.997b1056.chunk.js": "/theGrimoire/static/js/2.997b1056.chunk.js",
+    "static/js/2.997b1056.chunk.js.map": "/theGrimoire/static/js/2.997b1056.chunk.js.map",
+    "index.html": "/theGrimoire/index.html",
+    "precache-manifest.1b8336ea080038b639ae351617e42252.js": "/theGrimoire/precache-manifest.1b8336ea080038b639ae351617e42252.js",
+    "service-worker.js": "/theGrimoire/service-worker.js",
+    "static/css/main.6293af4e.chunk.css.map": "/theGrimoire/static/css/main.6293af4e.chunk.css.map",
+    "static/js/2.997b1056.chunk.js.LICENSE.txt": "/theGrimoire/static/js/2.997b1056.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/theGrimoire/static/media/parchment.9d5f2d43.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.05749c57.js",
-    "static/js/2.d78362e0.chunk.js",
-    "static/css/main.4c9b8db7.chunk.css",
-    "static/js/main.49ca146e.chunk.js"
+    "static/js/runtime-main.497260ab.js",
+    "static/js/2.997b1056.chunk.js",
+    "static/css/main.6293af4e.chunk.css",
+    "static/js/main.74330bfa.chunk.js"
   ]
 }
